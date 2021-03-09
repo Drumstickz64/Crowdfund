@@ -1,0 +1,17 @@
+{
+	"name": "crowdfund",
+	"version": "1.0.0",
+	"description": "a crowdfunding product page",
+	"main": "index.js",
+	"repository": "https://github.com/Drumstickz64/Crowdfund.git",
+	"author": "Drumstickz64 <gearman533@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "parcel src/index.html -d public",
+		"build": "parcel build src/index.html -d public"
+	},
+	"devDependencies": {
+		"parcel-bundler": "1.12.3",
+		"sass": "^1.32.8"
+	}
+}

@@ -1,0 +1,12 @@
+@import "./_reset.scss";
+@import "./_partials.scss";
+
+html {
+	font-size: 6.25%;
+}
+
+body {
+	font-size: $font-size;
+	font-family: $font-family;
+}
+
