@@ -8,16 +8,22 @@
   
   <title>Crowdfunding product page</title>
   <link rel="stylesheet" href="./scss/main.scss">
+  <script src="./index.js" defer></script>
 </head>
 <body>
 	<header class="header">
 		<nav class="nav">
-			<a href="/" class="logo">Crowdfund</a>
+			<a href="/" class="logo">crowdfund</a>
 			
-			<ul class="nav-list">
-				<li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-				<li class="nav-item"><a href="/discover" class="nav-link">Discover</a></li>
-				<li class="nav-item"><a href="/signup" class="nav-link">Get Started</a></li>
+			<button class="hamburger" aria-label="navigation toggle" data-target="#nav-menu">
+				<img class="hamburger-open" src="./images/icon-hamburger.svg" alt="">
+				<img class="hamburger-close" src="./images/icon-close-menu.svg" alt="">
+			</button>
+			
+			<ul class="nav-menu" data-hidden role="list" id="nav-menu">
+				<li class="nav-item"><a href="#" class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Discover</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">Get Started</a></li>
 			</ul>
 		</nav>
 		
