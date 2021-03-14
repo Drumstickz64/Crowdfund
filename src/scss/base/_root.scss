@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+@use "sass:meta";
+
+:root {
+	@each $bp-name, $bp-value in $breakpoints {
+		--bp-#{$bp-name}: #{$bp-value};
+	}
+	
+	--font-family: #{meta.inspect($font-family)};
+	
+	@each $fs-name, $fs-value in $font-sizes {
+		--fs-#{$fs-name}: #{$fs-value};
+	}
+	
+	@each $fw-name, $fw-value in $font-weights {
+		--fw-#{$fw-name}: #{$fw-value};
+	}
+	
+	@each $clr-name, $clr-value in $colors {
+		--clr-#{$clr-name}: #{$clr-value};
+	}
+}

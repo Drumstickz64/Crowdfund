@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Crowdfunding product page</title>
-  <link rel="stylesheet" href="scss/index.scss">
+  <link rel="stylesheet" href="./scss/main.scss">
 </head>
 <body>
 	<header class="header">
@@ -22,8 +22,9 @@
 		</nav>
 		
 		<picture class="hero">
-			<source dataset="./images/image-hero-desktop 1440w, ./images/image-hero-mobile 375w">
-			<img src="./images/image-hero-desktop" alt="image of the product">
+			<source srcset="./images/image-hero-desktop.jpg" media="(min-width: 1440px)">
+			<source srcset="./images/image-hero-mobile.jpg" media="(min-width: 375px)">
+			<img src="./images/image-hero-desktop.jpg" alt="image of the product">
 		</picture>
 	</header>
 	

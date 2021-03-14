@@ -1,0 +1,31 @@
+$breakpoints: (
+	"mobile": 375px,
+	"desktop": 1440px,
+);
+
+$font-family: "Commissioner", Sans-Serif;
+
+$font-sizes: (
+	"xs": 4rem,
+	"sm": 10rem,
+	"md": 16rem,
+	"lg": 24rem,
+	"xl": 35rem,
+	"xxl": 48rem,
+);
+
+$font-weights: (
+	"normal": 400,
+	"semibold": 500,
+	"bold": 700,
+);
+
+$colors: (
+	"primary-400": hsl(176, 50%, 47%),
+	"primary-700": hsl(176, 72%, 28%),
+	"black": hsl(0, 0%, 0%),
+	"gray-100": hsl(0 ,0%, 98%),
+	"gray-500": hsl(0, 0%, 48%),
+	"text": hsl(0, 0%, 48%),
+	"bg": hsl(0 ,0%, 98%),
+);
