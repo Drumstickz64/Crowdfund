@@ -1,0 +1,36 @@
+@use "../abstracts" as *;
+
+.btn {
+	display: inline-block;
+	padding: 0.75em 1.5em;
+	background: var(--clr-gray-200);
+	color: var(--clr-gray-500);
+	font-size: var(--fs-md);
+	border: none;
+	border-radius: 9999rem;
+	font-weight: var(--fw-bold);
+	cursor: pointer;
+	
+	&[data-primary] {
+		background: var(--clr-primary-400);
+		color: var(--clr-white);
+	}
+	
+	&.has-icon {
+		display: flex;
+		align-items: center;
+		padding: 0;
+	}
+	
+	&.is-collapsing .is-collapsible {
+		display: none;
+		padding: 0;
+	}
+	
+	@media screen and (min-width: $breakpoint-desktop) {
+		&.is-collapsing .is-collapsible {
+			display: block;
+			padding: 0 1.5em 0 0.8em;
+		}
+	}
+}

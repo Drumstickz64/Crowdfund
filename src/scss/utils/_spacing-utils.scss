@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+$directions: (
+	"top": "t",
+	"right": "r",
+	"bottom": "b",
+	"left": "l",
+);
+
+@each $scale-pos, $scale-value in $scales {
+	.m-#{$scale-pos} {
+		margin: $scale-value;
+	}
+	
+	@each $direction-name, $direction-abbreviation in $directions {
+		.m#{$direction-abbreviation}-#{$scale-pos} {
+			margin-#{$direction-name}: $scale-value;
+		}
+	}
+	
+	.p-#{$scale-pos} {
+		padding: $scale-value;
+	}
+	
+	@each $direction-name, $direction-abbreviation in $directions {
+		.p#{$direction-abbreviation}-#{$scale-pos} {
+			padding-#{$direction-name}: $scale-value;
+		}
+	}
+}

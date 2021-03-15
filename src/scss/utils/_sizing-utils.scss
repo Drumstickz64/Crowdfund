@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+@each $scale-pos, $scale-value in $scales {
+	.w-#{$scale-pos} {
+		width: $scale-value;
+	}
+	
+	.h-#{$scale-pos} {
+		height: $scale-value;
+	}
+}
+
+.w-full {
+	width: 100%;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.h-auto {
+	height: auto;
+}

@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+@each $clr-name, $_ in $colors {
+	.text-#{$clr-name} {
+		color: var(--clr-#{$clr-name});
+	}
+	
+	.bg-#{$clr-name} {
+		background: var(--clr-#{$clr-name});
+	}
+}

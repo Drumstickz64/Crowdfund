@@ -2,10 +2,6 @@
 @use "sass:meta";
 
 :root {
-	@each $bp-name, $bp-value in $breakpoints {
-		--bp-#{$bp-name}: #{$bp-value};
-	}
-	
 	--font-family: #{meta.inspect($font-family)};
 	
 	@each $fs-name, $fs-value in $font-sizes {
