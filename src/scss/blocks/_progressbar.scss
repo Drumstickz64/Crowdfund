@@ -1,0 +1,21 @@
+.progressbar {
+	display: block;
+	border: none;
+	appearance: none;
+	color: var(--clr-primary-400);
+	background: var(--clr-gray-200);
+	overflow: hidden;
+	border-radius: 9999rem;
+}
+
+.progressbar::-webkit-progress-bar {
+	background: var(--clr-gray-200);
+}
+
+.progressbar::-webkit-progress-value {
+	background: var(--clr-primary-400);
+}
+
+.progressbar::-moz-progress-bar {
+	background: var(--clr-primary-400);
+}
