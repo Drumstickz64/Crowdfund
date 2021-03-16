@@ -1,12 +1,21 @@
-@use "../abstracts" as *;
+$base-sizer: 10rem;
+$number-of-sizing-classes: 12;
 
-@each $scale-pos, $scale-value in $scales {
-	.w-#{$scale-pos} {
-		width: $scale-value;
+.w-0 {
+	width: 0;
+}
+
+.h-0 {
+	height: 0;
+}
+
+@for $i from 1 through $number-of-sizing-classes {
+	.w-#{$i} {
+		width: $base-sizer * $i;
 	}
 	
-	.h-#{$scale-pos} {
-		height: $scale-value;
+	.h-#{$i} {
+		height: $base-sizer * $i;
 	}
 }
 

@@ -1,4 +1,5 @@
-@use "../abstracts" as *;
+$base-spacer: 2rem;
+$number-of-spacer-classes: 12;
 
 $directions: (
 	"top": "t",
@@ -7,24 +8,42 @@ $directions: (
 	"left": "l",
 );
 
-@each $scale-pos, $scale-value in $scales {
-	.m-#{$scale-pos} {
-		margin: $scale-value;
+.m-0 {
+	margin: 0;
+}
+
+.p-0 {
+	padding: 0;
+}
+
+@each $direction-name, $direction-abbreviation in $directions {
+	.m#{$direction-abbreviation}-0 {
+		margin-#{$direction-name}: 0;
+	}
+	
+	.p#{$direction-abbreviation}-0 {
+		padding-#{$direction-name}: 0;
+	}
+}
+
+@for $i from 1 through $number-of-spacer-classes {
+	.m-#{$i} {
+		margin: $base-spacer * $i;
 	}
 	
 	@each $direction-name, $direction-abbreviation in $directions {
-		.m#{$direction-abbreviation}-#{$scale-pos} {
-			margin-#{$direction-name}: $scale-value;
+		.m#{$direction-abbreviation}-#{$i} {
+			margin-#{$direction-name}: $base-spacer * $i;
 		}
 	}
 	
-	.p-#{$scale-pos} {
-		padding: $scale-value;
+	.p-#{$i} {
+		padding: $base-spacer * $i;
 	}
 	
 	@each $direction-name, $direction-abbreviation in $directions {
-		.p#{$direction-abbreviation}-#{$scale-pos} {
-			padding-#{$direction-name}: $scale-value;
+		.p#{$direction-abbreviation}-#{$i} {
+			padding-#{$direction-name}: $base-spacer * $i;
 		}
 	}
 }
