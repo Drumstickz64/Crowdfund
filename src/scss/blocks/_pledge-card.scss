@@ -1,0 +1,35 @@
+.pledge-card {
+	--flow-spacer: 30rem;
+	padding: 32rem 26rem;
+	border: 2px solid var(--clr-gray-200);
+	border-radius: 0.5em;
+	
+	&-header span {
+		display: block;
+		font-size: var(--fs-md);
+	}
+	
+	&-header span:last-child {
+		margin-top: 12rem;
+		color: var(--clr-primary-400);
+		font-weight: var(--fw-medium);
+	}
+	
+	&-stat span:first-child {
+		font-size: var(--fs-xxl);
+	}
+	
+	&-stat span:last-child {
+		display: inline-block;
+		font-size: var(--fs-md);
+		color: var(--clr-gray-500);
+		font-weight: var(--fw-regular);
+		transform: translateY(-10rem);
+	}
+	
+	&.is-disabled {
+		opacity: 0.5;
+	}
+	
+	
+}

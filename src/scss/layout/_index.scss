@@ -1,4 +1,4 @@
-@use "header";
-@use "main";
-@use "intro";
-@use "stats";
+@forward "header";
+@forward "main";
+@forward "intro";
+@forward "stats";
