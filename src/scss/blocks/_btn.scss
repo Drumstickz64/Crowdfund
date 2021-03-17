@@ -27,6 +27,13 @@
 		padding: 0;
 	}
 	
+	&[disabled],
+	&.is-disabled {
+		color: var(--clr-white);
+		background: var(--clr-gray-500);
+		opacity: 0.75;
+	}
+	
 	@media screen and (min-width: $breakpoint-desktop) {
 		&.is-collapsing .is-collapsible {
 			display: block;
