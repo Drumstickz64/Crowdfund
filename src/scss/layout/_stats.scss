@@ -1,7 +1,18 @@
 .stat {
 	text-align: center;
-}
-
-.stat > span {
-	display: block;
+	
+	& span {
+		display: block;
+	}
+	
+	& span:first-child {
+		font-size: var(--fs-xxl);
+	}
+	
+	& span:last-child {
+		font-size: var(--fs-sm);
+		font-weight: var(--fw-regular);
+		margin-top: 8rem;
+		color: var(--clr-gray-500);
+	}
 }
