@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
-@each $fs-name, $_ in $font-sizes {
+@each $fs-name, $fs-value in $font-sizes {
 	.text-#{$fs-name} {
-		font-size: var(--fs-#{$fs-name});
+		font-size: $fs-value;
 	}
 }
 
-@each $fw-name, $_ in $font-weights {
+@each $fw-name, $fw-value in $font-weights {
 	.font-#{$fw-name} {
-		font-weight: var(--fw-#{$fw-name});
+		font-weight: $fw-value;
 	}
 }
