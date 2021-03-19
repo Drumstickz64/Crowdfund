@@ -4,12 +4,12 @@
 	border: 2px solid var(--clr-gray-200);
 	border-radius: 0.5em;
 	
-	&-header span {
+	&-heading span {
 		display: block;
 		font-size: var(--fs-md);
 	}
 	
-	&-header span:last-child {
+	&-heading span:nth-child(2) {
 		margin-top: 12rem;
 		color: var(--clr-primary-400);
 		font-weight: var(--fw-medium);
@@ -19,7 +19,7 @@
 		font-size: var(--fs-xxl);
 	}
 	
-	&-stat span:last-child {
+	&-stat span:nth-child(2) {
 		display: inline-block;
 		font-size: var(--fs-md);
 		color: var(--clr-gray-500);
@@ -31,5 +31,11 @@
 		opacity: 0.5;
 	}
 	
+	&.is-selection &-stat span:first-child {
+		font-size: var(--fs-lg);
+	}
 	
+	&.is-selection &-stat span:nth-child(2) {
+		transform: none;
+	}
 }

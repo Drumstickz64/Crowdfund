@@ -45,7 +45,7 @@
 				<h1 class="text-xl mt-10">Mastercraft Bamboo Monitor Riser</h1>
 				<p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 				<div class="flex">
-					<button class="btn | mr-4 w-full" data-primary>Back this project</button>
+					<button class="btn is-primary | mr-4 w-full">Back this project</button>
 					<button class="btn has-icon is-collapsing">
 						<span class="btn-icon">
 							<img class="w-8 h-6" src="./images/icon-bookmark.svg" alt="">
@@ -95,7 +95,7 @@
 				
 				<section style="--flow-spacer: 1.2em;" class="flow">
 					<article class="pledge-card | flow">
-						<h4 class="pledge-card-header">
+						<h4 class="pledge-card-heading">
 							<span>Bamboo Stand</span>
 							<span>Pledge $25 or more</span>
 						</h4>
@@ -107,10 +107,10 @@
 							<span>101</span>
 							<span>left</span>
 						</h2>
-						<button class="btn" data-primary>Select Reward</button>
+						<button class="btn is-primary">Select Reward</button>
 					</article>
 					<article class="pledge-card | flow">
-						<h4 class="pledge-card-header">
+						<h4 class="pledge-card-heading">
 							<span>Black Edition Stand</span>
 							<span>Pledge $75 or more</span>
 						</h4>
@@ -122,10 +122,10 @@
 							<span>64</span>
 							<span>left</span>
 						</h2>
-						<button class="btn" data-primary>Select Reward</button>
+						<button class="btn is-primary">Select Reward</button>
 					</article>
 					<article class="pledge-card is-disabled | flow">
-						<h4 class="pledge-card-header">
+						<h4 class="pledge-card-heading">
 							<span>Mahogany Special Edition</span>
 							<span>Pledge $200 or more</span>
 						</h4>
@@ -144,33 +144,48 @@
 		</section>
 	</main>
 	
-  <div class="modal | flow" id="pledge-modal">
-  	<button class="modal-close" aria-label="close modal">
-  		<img src="./images/icon-close-modal.svg" alt="">
-  	</button>
-  	<h2 class="text-lg">Back this project</h2>
-  	<p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+  <div class="modal | flow" data-active id="pledge-modal">
+  	<header class="modal-header">
+	  	<h2 class="text-lg">Back this project</h2>
+	  	<button class="modal-close" aria-label="close modal">
+	  		<img src="./images/icon-close-modal.svg" alt="">
+	  	</button>
+	  </header>
+  	<p class="mt-14">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
   	
-  	<article class="modal-pledge-card | flow pledge-card | flow">
-  		<input type="checkbox" name="no-reward" id="no-reward" class="pledge-checkbox checkbox">
-  		<label for="no-reward" class="pledge-label">Pledge with no reward</label>
-  		<p class="mt-5">
+  	<article class="pledge-card is-selection | flow">
+  		<div class="radio-control">
+	  		<input type="radio" name="pledge-tier" id="no-reward" class="radio is-primary">
+	  		<label for="no-reward" class="label">
+					<h4 class="pledge-card-heading">
+						<span>Pledge with no reward</span>
+					</h4>
+	  		</label>
+  		</div>
+  		<p>
 				Choose to support us without a reward if you simply believe in our project. As a backer, 
 			  you will be signed up to receive product updates via email.
   		</p>
   	</article>
   	
-  	<article class="modal-pledge-card | flow pledge-card | flow">
-  		<input type="checkbox" name="bamboo-stand-reward" id="bamboo-stand-reward" class="pledge-checkbox checkbox">
-  		<label for="bamboo-stand-reward" class="pledge-label">Bamboo Stand</label>
-  		<h4 class="text-primary-400">Pledge $25 or more</h4>
-  		<p class="mt-5">
+  	<article class="pledge-card is-selection | flow">
+  		<div class="radio-control">
+	  		<input type="radio" name="pledge-tier" id="bamboo-stand-pledge" class="radio is-primary">
+	  		<label for="bamboo-stand-pledge" class="label">
+					<h4 class="pledge-card-heading">
+						<span>Bamboo Stand</span>
+						<span>pledge 25$ or more</span>
+					</h4>
+	  		</label>
+  		</div>
+  		<p>
 			  You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
 			  you’ll be added to a special Backer member list.
   		</p>
-  		<h2 class="text-xl">
-  			101 left
-  		</h2>
+			<h2 class="pledge-card-stat">
+				<span>101</span>
+				<span>left</span>
+			</h2>
   		<div class="confirm-pledge">
   			<div class="text-center">Enter your pledge</div>
   			<div class="flex">
@@ -178,22 +193,29 @@
   					<span>$</span>
   					<input type="number" class="input" value="25">
   				</div>
-  				<button class="btn" data-primary>Continue</button>
+  				<button class="btn is-primary">Continue</button>
   			</div>
   		</div>
   	</article>
   	
-  	<article class="modal-pledge-card | flow pledge-card | flow">
-  		<input type="checkbox" name="black-edition-stand-reward" id="black-edition-stand-reward" class="pledge-checkbox checkbox">
-  		<label for="black-edition-stand-reward" class="pledge-label">Black Edition Stand</label>
-  		<h4 class="text-primary-400">Pledge $75 or more</h4>
-  		<p class="mt-5">
-			  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+  	<article class="pledge-card is-selection | flow">
+  		<div class="radio-control">
+	  		<input type="radio" name="pledge-tier" id="black-edition-pledge" class="radio is-primary">
+	  		<label for="black-edition-pledge" class="label">
+					<h4 class="pledge-card-heading">
+						<span>Black Edition Stand</span>
+						<span>pledge 75$ or more</span>
+					</h4>
+	  		</label>
+  		</div>
+  		<p>
+				You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
 			  member list. Shipping is included.
   		</p>
-  		<h2 class="text-xl">
-  			64 left
-  		</h2>
+			<h2 class="pledge-card-stat">
+				<span>64</span>
+				<span>left</span>
+			</h2>
   		<div class="confirm-pledge">
   			<div class="text-center">Enter your pledge</div>
   			<div class="flex">
@@ -201,22 +223,29 @@
   					<span>$</span>
   					<input type="number" class="input" value="75">
   				</div>
-  				<button class="btn" data-primary>Continue</button>
+  				<button class="btn is-primary">Continue</button>
   			</div>
   		</div>
   	</article>
   	
-  	<article class="modal-pledge-card | flow pledge-card | flow is-disabled">
-  		<input type="checkbox" name="mahogany-special-edition-stand-reward" id="mahogany-special-edition-stand-reward" class="pledge-checkbox checkbox">
-  		<label for="mahogany-special-edition-stand-reward" class="pledge-label">Mahogany Special Edition</label>
-  		<h4 class="text-primary-400">Pledge $200 or more</h4>
-  		<p class="mt-5">
-			  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+  	<article class="pledge-card is-selection is-disabled | flow">
+  		<div class="radio-control">
+	  		<input type="radio" name="pledge-tier" id="mahogany-special-edition-pledge" class="radio is-primary">
+	  		<label for="mahogany-special-edition-pledge" class="label">
+					<h4 class="pledge-card-heading">
+						<span>Mahogany Special Edition</span>
+						<span>pledge 200$ or more</span>
+					</h4>
+	  		</label>
+  		</div>
+  		<p>
+			  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
 			  to our Backer member list. Shipping is included.
   		</p>
-  		<h2 class="text-xl">
-  			0 left
-  		</h2>
+			<h2 class="pledge-card-stat">
+				<span>0</span>
+				<span>left</span>
+			</h2>
   		<div class="confirm-pledge">
   			<div class="text-center">Enter your pledge</div>
   			<div class="flex">
@@ -230,14 +259,14 @@
   	</article>
   </div>
 
-  <div class="modal | flow | text-center">
+  <div class="modal | flow | text-center" id="pledge-complete-modal">
   	<img src="./images/icon-check.svg" alt="">
   	<div class="text-xl font-bold">Thanks for your support!</div>
   	<p>
 			Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
 		  an email once our campaign is completed.
   	</p>
-  	<button class="btn" data-primary>Got it!</button>
+  	<button class="btn is-primary">Got it!</button>
   </div>
 </body>
 </html>

@@ -1,0 +1,34 @@
+.radio {
+	--color: var(--clr-gray-500);
+	
+	appearance: none;
+  display: inline-block;
+  position: relative;
+  line-height: 1.25;
+	padding: 0.8em;
+  border: 2px solid var(--clr-gray-200);
+	border-radius: 9999px;
+	color: var(--color);
+  cursor: pointer;
+  
+  &:checked {
+  	background: radial-gradient(currentColor 40%, rgba(255, 255, 255, 0) 41%);
+  }
+  
+  & + .label {
+  	margin-left: 12rem;
+  }
+  
+  &-control {
+  	display: flex;
+  	align-items: center;
+  }
+  
+  &.is-primary {
+  	--color: var(--clr-primary-400);
+  }
+}
+
+.confirm-pledge {
+	display: none;
+}

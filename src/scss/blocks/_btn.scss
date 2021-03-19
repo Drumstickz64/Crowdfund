@@ -11,7 +11,7 @@
 	font-weight: var(--fw-bold);
 	cursor: pointer;
 	
-	&[data-primary] {
+	&.is-primary {
 		background: var(--clr-primary-400);
 		color: var(--clr-white);
 	}
