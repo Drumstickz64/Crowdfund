@@ -10,7 +10,7 @@
 	}
 	
 	&-heading span:nth-child(2) {
-		margin-top: 12rem;
+		margin-top: 8rem;
 		color: var(--clr-primary-400);
 		font-weight: var(--fw-medium);
 	}
@@ -27,15 +27,36 @@
 		transform: translateY(-10rem);
 	}
 	
+	&-footer {
+		display: none;
+	}
+	
+	&-footer-msg {
+		text-align: center;
+	}
+	
+	&-confirm {
+		display: flex;
+	}
+	
 	&.is-disabled {
 		opacity: 0.5;
 	}
 	
+	/* styles for selectable pledge cards (that contain radios) */
 	&.is-selection &-stat span:first-child {
 		font-size: var(--fs-lg);
 	}
 	
 	&.is-selection &-stat span:nth-child(2) {
-		transform: none;
+		transform: translateY(-2rem);
+	}
+	
+	&[data-selected] {
+		border: 3px solid var(--clr-primary-400);
+	}
+	
+	&[data-selected] &-footer {
+		display: block;
 	}
 }

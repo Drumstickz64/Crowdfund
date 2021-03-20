@@ -168,7 +168,7 @@
   		</p>
   	</article>
   	
-  	<article class="pledge-card is-selection | flow">
+  	<article data-selected class="pledge-card is-selection | flow">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="bamboo-stand-pledge" class="radio is-primary">
 	  		<label for="bamboo-stand-pledge" class="label">
@@ -186,16 +186,16 @@
 				<span>101</span>
 				<span>left</span>
 			</h2>
-  		<div class="confirm-pledge">
-  			<div class="text-center">Enter your pledge</div>
-  			<div class="flex">
-  				<div class="pledge-input">
+  		<footer class="pledge-card-footer">
+  			<div class="pledge-card-footer-msg">Enter your pledge</div>
+  			<div class="pledge-card-confirm">
+  				<div class="pledge-card-input">
   					<span>$</span>
   					<input type="number" class="input" value="25">
   				</div>
   				<button class="btn is-primary">Continue</button>
   			</div>
-  		</div>
+  		</footer>
   	</article>
   	
   	<article class="pledge-card is-selection | flow">
@@ -216,7 +216,7 @@
 				<span>64</span>
 				<span>left</span>
 			</h2>
-  		<div class="confirm-pledge">
+  		<footer class="pledge-card-footer">
   			<div class="text-center">Enter your pledge</div>
   			<div class="flex">
   				<div class="pledge-input">
@@ -225,7 +225,7 @@
   				</div>
   				<button class="btn is-primary">Continue</button>
   			</div>
-  		</div>
+  		</footer>
   	</article>
   	
   	<article class="pledge-card is-selection is-disabled | flow">
@@ -246,7 +246,7 @@
 				<span>0</span>
 				<span>left</span>
 			</h2>
-  		<div class="confirm-pledge">
+  		<footer class="pledge-card-footer">
   			<div class="text-center">Enter your pledge</div>
   			<div class="flex">
   				<div class="pledge-input">
@@ -255,7 +255,7 @@
   				</div>
   				<button class="btn" disabled>Continue</button>
   			</div>
-  		</div>
+  		</footer>
   	</article>
   </div>
 
