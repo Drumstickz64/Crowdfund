@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+$text-directions: ("left", "center", "right");
+
 @each $fs-name, $fs-value in $font-sizes {
 	.text-#{$fs-name} {
 		font-size: $fs-value;
@@ -9,5 +11,11 @@
 @each $fw-name, $fw-value in $font-weights {
 	.font-#{$fw-name} {
 		font-weight: $fw-value;
+	}
+}
+
+@each $dir in $text-directions {
+	.text-#{$dir} {
+		text-align: #{$dir};
 	}
 }
