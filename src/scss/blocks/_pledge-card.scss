@@ -37,6 +37,28 @@
 	
 	&-confirm {
 		display: flex;
+		justify-content: space-around;
+		margin-top: 20rem;
+	}
+	
+	&-input {
+		position: relative;
+		font-weight: var(--fw-bold);
+	}
+	
+	&-input span {
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		transform: translate(-50%, -50%);
+		color: var(--clr-gray-200);
+	}
+	
+	&-input .input {
+		text-align: center;
+		width: 90%;
+		height: 100%;
+		color: var(--clr-black);
 	}
 	
 	&.is-disabled {
