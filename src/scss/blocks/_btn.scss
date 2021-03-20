@@ -27,7 +27,23 @@
 		padding: 0;
 	}
 	
-	&[disabled],
+	&:hover,
+	&:focus {
+		background: var(--clr-primary-700);
+	}
+	
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 2rem 4rem var(--clr-primary-400);
+	}
+	
+	&:not(:disabled):active {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+		transform: scale(0.97);
+	}
+	
+	&:disabled,
 	&.is-disabled {
 		color: var(--clr-white);
 		background: var(--clr-gray-500);
