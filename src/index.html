@@ -144,7 +144,7 @@
 		</section>
 	</main>
 	
-  <div class="modal | flow" id="pledge-modal">
+  <div data-active class="modal | flow" id="pledge-modal">
   	<header class="modal-header">
 	  	<h2 class="text-lg">Back this project</h2>
 	  	<button class="modal-close" aria-label="close modal">
@@ -168,7 +168,7 @@
   		</p>
   	</article>
   	
-  	<article class="pledge-card is-selection | flow">
+  	<article data-selected class="pledge-card is-selection | flow">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="bamboo-stand-pledge" class="radio is-primary">
 	  		<label for="bamboo-stand-pledge" class="label">
@@ -198,7 +198,7 @@
   		</footer>
   	</article>
   	
-  	<article class="pledge-card is-selection | flow">
+  	<article data-selected class="pledge-card is-selection | flow">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="black-edition-pledge" class="radio is-primary">
 	  		<label for="black-edition-pledge" class="label">
@@ -217,9 +217,9 @@
 				<span>left</span>
 			</h2>
   		<footer class="pledge-card-footer">
-  			<div class="text-center">Enter your pledge</div>
-  			<div class="flex">
-  				<div class="pledge-input">
+  			<div class="pledge-card-footer-msg">Enter your pledge</div>
+  			<div class="pledge-card-confirm">
+  				<div class="pledge-card-input">
   					<span>$</span>
   					<input type="number" class="input" value="75">
   				</div>
@@ -228,7 +228,7 @@
   		</footer>
   	</article>
   	
-  	<article class="pledge-card is-selection is-disabled | flow">
+  	<article data-selected class="pledge-card is-selection is-disabled | flow">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="mahogany-special-edition-pledge" class="radio is-primary">
 	  		<label for="mahogany-special-edition-pledge" class="label">
@@ -247,13 +247,13 @@
 				<span>left</span>
 			</h2>
   		<footer class="pledge-card-footer">
-  			<div class="text-center">Enter your pledge</div>
-  			<div class="flex">
-  				<div class="pledge-input">
+  			<div class="pledge-card-footer-msg">Enter your pledge</div>
+  			<div class="pledge-card-confirm">
+  				<div class="pledge-card-input">
   					<span>$</span>
   					<input type="number" class="input" value="200">
   				</div>
-  				<button class="btn" disabled>Continue</button>
+  				<button class="btn is-primary">Continue</button>
   			</div>
   		</footer>
   	</article>
