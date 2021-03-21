@@ -10,7 +10,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/main.scss">
-  <script src="./script.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 <body>
 	<header class="header">
@@ -45,7 +45,7 @@
 				<h1 class="text-xl mt-10">Mastercraft Bamboo Monitor Riser</h1>
 				<p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 				<div class="flex">
-					<button class="btn is-primary | mr-4 w-full">Back this project</button>
+					<button class="btn is-primary | mr-4 w-full" id="back-project-btn">Back this project</button>
 					<button class="btn has-icon is-collapsing">
 						<span class="btn-icon">
 							<img class="w-8 h-6" src="./images/icon-bookmark.svg" alt="">
@@ -107,7 +107,7 @@
 							<span>101</span>
 							<span>left</span>
 						</h2>
-						<button class="btn is-primary">Select Reward</button>
+						<button data-pledge-target="#bamboo-stand-pledge" class="btn is-primary">Select Reward</button>
 					</article>
 					<article class="pledge-card">
 						<h4 class="pledge-card-heading">
@@ -122,7 +122,7 @@
 							<span>64</span>
 							<span>left</span>
 						</h2>
-						<button class="btn is-primary">Select Reward</button>
+						<button data-pledge-target="#black-edition-pledge" class="btn is-primary">Select Reward</button>
 					</article>
 					<article class="pledge-card is-disabled">
 						<h4 class="pledge-card-heading">
@@ -137,7 +137,7 @@
 							<span>0</span>
 							<span>left</span>
 						</h2>
-						<button class="btn" disabled>Out of Stock</button>
+						<button data-pledge-target="#mahogany-special-edition-pledge" class="btn" disabled>Out of Stock</button>
 					</article>
 				</section>
 			</article>
@@ -147,7 +147,7 @@
   <div class="modal | flow" id="pledge-modal">
   	<header class="modal-header">
 	  	<h2 class="text-lg">Back this project</h2>
-	  	<button class="modal-close" aria-label="close modal">
+	  	<button class="modal-close" data-modal-close aria-label="close modal">
 	  		<img src="./images/icon-close-modal.svg" alt="">
 	  	</button>
 	  </header>
@@ -230,7 +230,7 @@
   	
   	<article class="pledge-card is-selection is-disabled">
   		<div class="radio-control">
-	  		<input type="radio" name="pledge-tier" id="mahogany-special-edition-pledge" class="radio is-primary">
+	  		<input disabled type="radio" name="pledge-tier" id="mahogany-special-edition-pledge" class="radio is-primary">
 	  		<label for="mahogany-special-edition-pledge" class="label">
 					<h4 class="pledge-card-heading">
 						<span>Mahogany Special Edition</span>
@@ -253,7 +253,7 @@
   					<span>$</span>
   					<input type="number" class="input" disabled value="200">
   				</div>
-  				<button disabled class="btn is-primary">Continue</button>
+  				<button disabled class="btn is-primary">Out of Stock</button>
   			</div>
   		</footer>
   	</article>
@@ -268,7 +268,7 @@
 			Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
 		  an email once our campaign is completed.
   	</p>
-  	<button class="btn is-primary | mt-17">Got it!</button>
+  	<button data-modal-close class="btn is-primary | mt-17">Got it!</button>
   </div>
 </body>
 </html>

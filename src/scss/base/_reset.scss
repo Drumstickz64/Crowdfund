@@ -62,9 +62,8 @@ button,
 	cursor: pointer;
 }
 
-button[disabled],
-[roll="button"][disabled] {
-	cursor: default;
+:disabled {
+	cursor: default !important;
 }
 
 *:focus {
