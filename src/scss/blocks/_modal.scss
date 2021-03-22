@@ -4,17 +4,16 @@
 	@extend .box;
 	
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 50%;
-	transform: translate(-50%, 135rem);
 	width: 90%;
+	max-width: 480rem;
+	max-height: 72vh;
+	overflow-y: auto;
+	transform: translate(-50%, 135rem);
 	box-shadow: 0 0 0 9999rem rgba(0, 0, 0, 0.6);
 	z-index: 999;
-	
-	&[data-active] {
-		display: block;
-	}
 	
 	&-header {
 		display: flex;
@@ -25,5 +24,9 @@
 	&-close {
 		background: none;
 		border: none;
+	}
+	
+	&[data-active] {
+		display: block;
 	}
 }
