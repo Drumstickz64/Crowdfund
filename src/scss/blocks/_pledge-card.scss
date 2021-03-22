@@ -8,6 +8,7 @@
 	padding: 32rem 26rem;
 	border: 2px solid var(--clr-gray-200);
 	border-radius: 0.5em;
+	overflow-x: hidden;
 	
 	&-heading span {
 		display: block;
@@ -20,11 +21,11 @@
 		font-weight: var(--fw-medium);
 	}
 	
-	&-stat span:first-child {
+	&-stock span:first-child {
 		font-size: var(--fs-xxl);
 	}
 	
-	&-stat span:nth-child(2) {
+	&-stock span:nth-child(2) {
 		display: inline-block;
 		font-size: var(--fs-md);
 		color: var(--clr-gray-500);
@@ -71,12 +72,16 @@
 	}
 	
 	/* styles for selectable pledge cards (that contain radios) */
-	&.is-selection &-stat span:first-child {
+	&.is-selection &-stock span:first-child {
 		font-size: var(--fs-lg);
 	}
 	
-	&.is-selection &-stat span:nth-child(2) {
+	&.is-selection &-stock span:nth-child(2) {
 		transform: translateY(-2rem);
+	}
+	
+	&.is-selection .line {
+		transform: scaleX(1.5);
 	}
 	
 	&[data-selected] {
