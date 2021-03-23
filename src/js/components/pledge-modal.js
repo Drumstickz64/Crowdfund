@@ -1,8 +1,8 @@
 const selectionPledgeCards = document.querySelectorAll(".pledge-card.is-selection");
-const selectPledgeRadios = document.querySelectorAll(".radio[name=\"pledge-tier\"]");
+const selectionPledgeRadios = document.querySelectorAll(".radio[name=\"pledge-tier\"]");
 
 
-function selectPledge(e) {
+function selectionPledge(e) {
 	selectionPledgeCards.forEach(selectionPledgeCard => {
 		selectionPledgeCard.removeAttribute("data-selected");
 	});
@@ -12,10 +12,10 @@ function selectPledge(e) {
 }
 
 
-selectPledgeRadios.forEach(selectPledgeRadio => {
-	selectPledgeRadio.addEventListener("click", selectPledge);
+selectionPledgeRadios.forEach(selectionPledgeRadio => {
+	selectionPledgeRadio.addEventListener("click", selectionPledge);
 });
 
 export {
-	selectPledgeRadios,
+	selectionPledgeRadios,
 };
