@@ -39,6 +39,7 @@
 	
 	&-footer-msg {
 		text-align: center;
+		margin-top: var(--flow-spacer);
 	}
 	
 	&-confirm {
@@ -88,6 +89,7 @@
 		border: 3px solid var(--clr-primary-400);
 	}
 	
+	//&[data-selected] .line,
 	&[data-selected] &-footer {
 		display: block;
 	}
