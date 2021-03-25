@@ -15,10 +15,20 @@
 	box-shadow: 0 0 0 9999rem rgba(0, 0, 0, 0.6);
 	z-index: 999;
 	
+	&.has-header {
+		padding-top: 0;
+	}
+	
 	&-header {
+		position: sticky;
+		top: 0;
+		left: 0;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		padding: 32rem 0 16rem;
+		background: var(--clr-white);
+		z-index: 10;
 	}
 	
 	&-close {
