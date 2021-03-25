@@ -19,11 +19,13 @@ function selectPledge(e) {
 function confirmPledge(e) {
 	const currentPledgeCard = e.target.closest(".pledge-card");
 	const inputElem = currentPledgeCard.querySelector(".pledge-card-input input");
-	let amountPledged = Number(inputElem.value);
+	let pledgeValue = Number(inputElem.value);
 	// payment is simply rounded down. this would not be the case in a real app
-	amountPledged = Math.floor(amountPledged);
+	pledgeValue = Math.floor(pledgeValue);
 	
-	Store.updateState("amountPledged", oldValue => oldValue + amountPledged);
+	if (pledgeValue < 0) pledgeValue = 0;
+	
+	Store.updateState("amountPledged", oldValue => oldValue + pledgeValue);
 	Store.updateState("numOfBackers", oldValue => oldValue + 1);
 	
 	showPledgeCompleteModal();
