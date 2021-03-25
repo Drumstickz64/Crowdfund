@@ -12,11 +12,18 @@ function selectPledge(e) {
 		selectionPledgeCard.removeAttribute("data-selected");
 	});
 	
-	const currentCard = e.target.closest(".pledge-card");
-	currentCard.setAttribute("data-selected", "");
+	const currentPledgeCard = e.target.closest(".pledge-card");
+	currentPledgeCard.setAttribute("data-selected", "");
 }
 
-function confirmPledge() {
+function confirmPledge(e) {
+	const currentPledgeCard = e.target.closest(".pledge-card");
+	const inputElem = currentPledgeCard.querySelector(".pledge-card-input input");
+	let amountPledged = Number(inputElem.value);
+	// payment is simply rounded down. this would not be the case in a real app
+	amountPledged = Math.floor(amountPledged);
+	
+	Store.updateState("amountPledged", oldValue => oldValue + amountPledged);
 	Store.updateState("numOfBackers", oldValue => oldValue + 1);
 	
 	showPledgeCompleteModal();
