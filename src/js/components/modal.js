@@ -1,9 +1,14 @@
 const closeModalBtns = document.querySelectorAll("[data-modal-close]");
 const pledgeModal = document.getElementById("pledge-modal");
+const pledgeCompleteModal = document.getElementById("pledge-complete-modal");
 
 
 function showPledgeModal() {
 	pledgeModal.setAttribute("data-active", "");
+}
+
+function showPledgeCompleteModal() {
+	pledgeCompleteModal.setAttribute("data-active", "");
 }
 
 function closeModal(e) {
@@ -18,4 +23,5 @@ closeModalBtns.forEach(closeModalBtn => {
 
 export {
 	showPledgeModal,
+	showPledgeCompleteModal,
 };

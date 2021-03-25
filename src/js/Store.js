@@ -1,10 +1,9 @@
-const Store = {
+export default {
 	/**
 		a single Store object to manage the entire state of the app
 	*/
 	_state: {
-		donationTarget: 100000,
-		amountDonated: 89914,
+		amountPledged: 89914,
 		numOfBackers: 5007,
 	},
 	
