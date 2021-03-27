@@ -49,6 +49,11 @@ picture {
   display: block;
 }
 
+svg {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,

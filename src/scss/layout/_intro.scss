@@ -9,3 +9,21 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+#bookmark-btn:hover #bookmark-icon circle {
+	fill: var(--clr-gray-500);
+}
+
+#bookmark-btn[data-bookmarked] {
+	#bookmark-icon circle {
+		fill: var(--clr-primary-400);
+	}
+	
+	#bookmark-icon path {
+		fill: var(--clr-white);
+	}
+	
+	span {
+		color: var(--clr-primary-400);
+	}
+}

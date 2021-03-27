@@ -32,8 +32,8 @@
 		</nav>
 		
 		<picture class="hero">
-			<source srcset="./images/image-hero-desktop.jpg" media="(min-width: 1440px)">
-			<source srcset="./images/image-hero-mobile.jpg" media="(min-width: 375px)">
+			<source srcset="./images/image-hero-desktop.jpg" media="(min-width: 600px)">
+			<source srcset="./images/image-hero-mobile.jpg">
 			<img src="./images/image-hero-desktop.jpg" alt="image of the product">
 		</picture>
 	</header>
@@ -46,9 +46,9 @@
 				<p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
 				<div class="flex">
 					<button class="btn is-primary | mr-4 w-full" id="back-project-btn">Back this project</button>
-					<button class="btn has-icon is-collapsing">
+					<button class="btn has-icon is-collapsing" id="bookmark-btn">
 						<span class="btn-icon">
-							<img class="w-8 h-6" src="./images/icon-bookmark.svg" alt="">
+							<svg id="bookmark-icon" width="56" height="56" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#2F2F2F" cx="28" cy="28" r="28"/><path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z"/></g></svg>
 						</span>
 						<span class="is-collapsible">Bookmark</span>
 					</button>
@@ -156,10 +156,8 @@
   	<article class="pledge-card is-selection">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="no-reward" class="radio is-primary">
-	  		<label for="no-reward" class="label">
-					<h4 class="pledge-card-heading">
-						<span>Pledge with no reward</span>
-					</h4>
+	  		<label for="no-reward" class="label pledge-card-heading">
+					<span>Pledge with no reward</span>
 	  		</label>
   		</div>
   		<p>
@@ -177,11 +175,9 @@
   	<article class="pledge-card is-selection">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="bamboo-stand-pledge" class="radio is-primary">
-	  		<label for="bamboo-stand-pledge" class="label">
-					<h4 class="pledge-card-heading">
-						<span>Bamboo Stand</span>
-						<span>pledge 25$ or more</span>
-					</h4>
+	  		<label for="bamboo-stand-pledge" class="label pledge-card-heading">
+					<span>Bamboo Stand</span>
+					<span>pledge 25$ or more</span>
 	  		</label>
   		</div>
   		<p>
@@ -208,11 +204,9 @@
   	<article class="pledge-card is-selection">
   		<div class="radio-control">
 	  		<input type="radio" name="pledge-tier" id="black-edition-pledge" class="radio is-primary">
-	  		<label for="black-edition-pledge" class="label">
-					<h4 class="pledge-card-heading">
-						<span>Black Edition Stand</span>
-						<span>pledge 75$ or more</span>
-					</h4>
+	  		<label for="black-edition-pledge" class="label pledge-card-heading">
+					<span>Black Edition Stand</span>
+					<span>pledge 75$ or more</span>
 	  		</label>
   		</div>
   		<p>
@@ -229,7 +223,7 @@
   			<div class="pledge-card-confirm">
   				<div class="pledge-card-input">
   					<span>$</span>
-  					<input type="number" class="input" value="75">
+  					<input type="number" name="pledge-amount" class="input" value="75">
   				</div>
   				<button data-modal-close class="btn is-primary">Continue</button>
   			</div>
@@ -239,11 +233,9 @@
   	<article class="pledge-card is-selection is-disabled">
   		<div class="radio-control">
 	  		<input disabled type="radio" name="pledge-tier" id="mahogany-special-edition-pledge" class="radio is-primary">
-	  		<label for="mahogany-special-edition-pledge" class="label">
-					<h4 class="pledge-card-heading">
-						<span>Mahogany Special Edition</span>
-						<span>pledge 200$ or more</span>
-					</h4>
+	  		<label for="mahogany-special-edition-pledge" class="label pledge-card-heading">
+					<span>Mahogany Special Edition</span>
+					<span>pledge 200$ or more</span>
 	  		</label>
   		</div>
   		<p>
@@ -260,7 +252,7 @@
   			<div class="pledge-card-confirm">
   				<div class="pledge-card-input">
   					<span>$</span>
-  					<input type="number" class="input" disabled value="200">
+  					<input type="number" name="pledge-amount" class="input" disabled value="200">
   				</div>
   				<button data-modal-close disabled class="btn is-primary">Continue</button>
   			</div>

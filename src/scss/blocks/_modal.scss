@@ -1,7 +1,9 @@
 @use "./box";
+@use "../utils/no-scrollbar";
 
 .modal {
 	@extend .box;
+	@extend .no-scrollbar;
 	
 	display: none;
 	position: fixed;
