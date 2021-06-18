@@ -1,59 +1,52 @@
 @use "../abstracts" as *;
 
 .btn {
-	display: inline-block;
-	padding: 1em 2em;
-	background: var(--clr-gray-100);
-	color: var(--clr-gray-500);
-	font-size: var(--fs-md);
-	border: none;
-	border-radius: 9999rem;
-	font-weight: var(--fw-bold);
-	cursor: pointer;
-	
-	&.is-primary {
-		background: var(--clr-primary-400);
-		color: var(--clr-white);
-	}
-	
-	&.has-icon {
-		display: flex;
-		align-items: center;
-		padding: 0;
-	}
-	
-	&.is-collapsing .is-collapsible {
-		display: none;
-		padding: 0;
-	}
-	
-	&.is-primary:hover,
-	&.is-primary:focus {
-		background: var(--clr-primary-700);
-	}
-	
-	&:focus {
-		outline: none;
-		box-shadow: 0 0 2rem 4rem var(--clr-primary-400);
-	}
-	
-	&:not(:disabled):active {
-		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  padding: 1em 2em;
+  background: var(--clr-gray-100);
+  color: var(--clr-gray-500);
+  font-size: var(--fs-md);
+  border: none;
+  border-radius: 9999rem;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+
+  &.is-primary {
+    background: var(--clr-primary-400);
+    color: var(--clr-white);
+  }
+
+  &.has-icon {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  &.is-collapsing .is-collapsible {
+    display: none;
+    padding: 0;
+  }
+
+  &.is-primary:hover,
+  &.is-primary:focus {
+    background: var(--clr-primary-700);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 2rem 4rem var(--clr-primary-400);
+  }
+
+  &:not(:disabled):active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -moz-tap-highlight-color: rgba(0, 0, 0, 0);
-		transform: scale(0.97);
-	}
-	
-	&:disabled,
-	&.is-disabled {
-		color: var(--clr-white);
-		background: var(--clr-gray-500);
-		opacity: 0.75;
-	}
-	
-	@media screen and (min-width: $breakpoint-desktop) {
-		&.is-collapsing .is-collapsible {
-			display: block;
-			padding: 0 1.5em 0 0.8em;
-		}
-	}
+    transform: scale(0.97);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: var(--clr-white);
+    background: var(--clr-gray-500);
+    opacity: 0.75;
+  }
 }
