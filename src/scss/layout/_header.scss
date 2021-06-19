@@ -1,6 +1,6 @@
 @use "../abstracts/mixins" as *;
 
-$_responsive-size: 40rem;
+$_responsive-size: 45em;
 
 .logo {
   display: block;
@@ -116,6 +116,10 @@ $_responsive-size: 40rem;
     color: var(--clr-gray-100);
     font-weight: var(--fw-regular);
   }
+}
+
+.hero {
+  max-height: 30vh;
 }
 
 .hero img {
