@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .main {
-	transform: translateY(-48rem);
+  transform: translateY(-48rem);
 }

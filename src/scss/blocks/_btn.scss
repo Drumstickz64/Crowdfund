@@ -3,7 +3,7 @@
 .btn {
   display: inline-block;
   padding: 1em 2em;
-  background: var(--clr-gray-100);
+  background: var(--clr-gray-150);
   color: var(--clr-gray-500);
   font-size: var(--fs-md);
   border: none;
@@ -48,5 +48,12 @@
     color: var(--clr-white);
     background: var(--clr-gray-500);
     opacity: 0.75;
+  }
+
+  @include media(45rem) {
+    &.is-collapsing .is-collapsible {
+      display: block;
+      padding: 0 1.25em 0 0.75em;
+    }
   }
 }

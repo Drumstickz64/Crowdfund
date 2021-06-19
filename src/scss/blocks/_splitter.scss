@@ -1,0 +1,6 @@
+.splitter {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+}
