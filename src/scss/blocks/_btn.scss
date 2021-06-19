@@ -50,7 +50,7 @@
     opacity: 0.75;
   }
 
-  @include media(45rem) {
+  @include media(32em) {
     &.is-collapsing .is-collapsible {
       display: block;
       padding: 0 1.25em 0 0.75em;
