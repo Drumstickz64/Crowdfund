@@ -6,8 +6,9 @@
   --flow-spacer: 30rem;
 
   @extend .flow;
+  --padding-x: 26rem;
 
-  padding: 32rem 26rem;
+  padding: 32rem var(--padding-x);
   border: 2px solid var(--clr-gray-200);
   border-radius: 0.5em;
   overflow-x: hidden;
@@ -110,8 +111,9 @@
       justify-content: space-between;
     }
 
-    &-heading > * {
+    &-heading > span:nth-child(2) {
       margin-top: 0;
+      margin-left: 15rem;
     }
 
     &-deal-area {
@@ -121,6 +123,16 @@
 
     .btn {
       margin-top: 0;
+    }
+
+    &.is-selection {
+      position: relative;
+    }
+
+    &-stock {
+      position: absolute;
+      top: 0;
+      right: var(--padding-x);
     }
   }
 }
