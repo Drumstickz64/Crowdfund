@@ -1,101 +1,126 @@
 @use "../base/typography";
 @use "flow";
+@use "../abstracts/mixins" as *;
 
 .pledge-card {
-	--flow-spacer: 30rem;
-	
-	@extend .flow;
-	
-	padding: 32rem 26rem;
-	border: 2px solid var(--clr-gray-200);
-	border-radius: 0.5em;
-	overflow-x: hidden;
-	
-	&-heading {
-		@extend h4;
-	}
-	
-	&-heading span {
-		display: block;
-		font-size: var(--fs-md);
-	}
-	
-	&-heading span:nth-child(2) {
-		margin-top: 8rem;
-		color: var(--clr-primary-400);
-		font-weight: var(--fw-medium);
-	}
-	
-	&-stock span:first-child {
-		font-size: var(--fs-xxl);
-	}
-	
-	&-stock span:nth-child(2) {
-		display: inline-block;
-		font-size: var(--fs-md);
-		color: var(--clr-gray-500);
-		font-weight: var(--fw-regular);
-		transform: translateY(-10rem);
-	}
-	
-	&-footer {
-		display: none;
-	}
-	
-	&-footer-msg {
-		text-align: center;
-		margin-top: var(--flow-spacer);
-	}
-	
-	&-confirm {
-		display: flex;
-		justify-content: space-around;
-		margin-top: 20rem;
-	}
-	
-	&-input {
-		position: relative;
-		font-weight: var(--fw-bold);
-	}
-	
-	&-input span {
-		position: absolute;
-		top: 50%;
-		left: 25%;
-		transform: translate(-50%, -50%);
-		color: var(--clr-gray-200);
-	}
-	
-	&-input .input {
-		text-align: center;
-		width: 90%;
-		height: 100%;
-		color: var(--clr-black);
-	}
-	
-	&.is-disabled {
-		opacity: 0.5;
-	}
-	
-	/* styles for selectable pledge cards (that contain radios) */
-	&.is-selection &-stock span:first-child {
-		font-size: var(--fs-lg);
-	}
-	
-	&.is-selection &-stock span:nth-child(2) {
-		transform: translateY(-2rem);
-	}
-	
-	&.is-selection .line {
-		transform: scaleX(1.5);
-	}
-	
-	&[data-selected] {
-		border: 3px solid var(--clr-primary-400);
-	}
-	
-	//&[data-selected] .line,
-	&[data-selected] &-footer {
-		display: block;
-	}
+  --flow-spacer: 30rem;
+
+  @extend .flow;
+
+  padding: 32rem 26rem;
+  border: 2px solid var(--clr-gray-200);
+  border-radius: 0.5em;
+  overflow-x: hidden;
+
+  &-heading {
+    @extend h4;
+  }
+
+  &-heading span {
+    display: block;
+    font-size: var(--fs-md);
+  }
+
+  &-heading span:nth-child(2) {
+    margin-top: 8rem;
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-medium);
+  }
+
+  &-stock span:first-child {
+    font-size: var(--fs-xxl);
+  }
+
+  &-stock span:nth-child(2) {
+    display: inline-block;
+    font-size: var(--fs-md);
+    color: var(--clr-gray-500);
+    font-weight: var(--fw-regular);
+    transform: translateY(-10rem);
+  }
+
+  .btn {
+    margin-top: var(--flow-spacer);
+  }
+
+  &-footer {
+    display: none;
+  }
+
+  &-footer-msg {
+    text-align: center;
+    margin-top: var(--flow-spacer);
+  }
+
+  &-confirm {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20rem;
+  }
+
+  &-input {
+    position: relative;
+    font-weight: var(--fw-bold);
+  }
+
+  &-input span {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-gray-200);
+  }
+
+  &-input .input {
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    color: var(--clr-black);
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+  }
+
+  /* styles for selectable pledge cards (that contain radios) */
+  &.is-selection &-stock span:first-child {
+    font-size: var(--fs-lg);
+  }
+
+  &.is-selection &-stock span:nth-child(2) {
+    transform: translateY(-2rem);
+  }
+
+  &.is-selection .line {
+    transform: scaleX(1.5);
+  }
+
+  &[data-selected] {
+    border: 3px solid var(--clr-primary-400);
+  }
+
+  //&[data-selected] .line,
+  &[data-selected] &-footer {
+    display: block;
+  }
+
+  @include media(45rem) {
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-heading > * {
+      margin-top: 0;
+    }
+
+    &-deal-area {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      margin-top: 0;
+    }
+  }
 }

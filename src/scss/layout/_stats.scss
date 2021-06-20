@@ -8,7 +8,7 @@
     width: 80rem;
   }
 
-  @include media(45em) {
+  @include media(45rem) {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 3fr 1fr;
     justify-content: space-evenly;
