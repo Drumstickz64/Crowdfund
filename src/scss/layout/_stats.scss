@@ -1,3 +1,27 @@
-.stats .line {
-	width: 80rem;
+@use "../abstracts/mixins" as *;
+
+.stats {
+  display: grid;
+  row-gap: var(--flow-spacer);
+
+  .line {
+    width: 80rem;
+  }
+
+  @include media(45em) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 3fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .line {
+      width: 2px;
+      height: 80%;
+    }
+
+    #pledge-progress {
+      grid-column: span 5;
+      grid-row: 2 / 3;
+    }
+  }
 }
