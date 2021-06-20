@@ -120,6 +120,9 @@ $_responsive-size: 45em;
 
 .hero {
   max-height: 50vh;
+}
+
+.hero img {
   width: 100%;
   object-fit: cover;
 }
