@@ -1,29 +1,33 @@
 .intro {
-	position: relative;
-	text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .intro-logo {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #bookmark-btn:hover #bookmark-icon circle {
-	fill: var(--clr-gray-500);
+  fill: var(--clr-gray-500);
 }
 
 #bookmark-btn[data-bookmarked] {
-	#bookmark-icon circle {
-		fill: var(--clr-primary-400);
-	}
-	
-	#bookmark-icon path {
-		fill: var(--clr-white);
-	}
-	
-	span {
-		color: var(--clr-primary-400);
-	}
+  #bookmark-icon circle {
+    fill: var(--clr-primary-400);
+  }
+
+  #bookmark-icon path {
+    fill: var(--clr-white);
+  }
+
+  span {
+    color: var(--clr-primary-400);
+  }
+
+  &:hover #bookmark-icon circle {
+    fill: var(--clr-primary-700);
+  }
 }

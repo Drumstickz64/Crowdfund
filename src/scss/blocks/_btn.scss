@@ -1,9 +1,11 @@
 @use "../abstracts" as *;
 
 .btn {
+  --bg-color: var(--clr-gray-150);
+
   display: inline-block;
   padding: 1em 2em;
-  background: var(--clr-gray-150);
+  background: var(--bg-color);
   color: var(--clr-gray-500);
   font-size: var(--fs-md);
   border: none;
@@ -12,7 +14,7 @@
   cursor: pointer;
 
   &.is-primary {
-    background: var(--clr-primary-400);
+    --bg-color: var(--clr-primary-400);
     color: var(--clr-white);
   }
 
@@ -29,12 +31,13 @@
 
   &.is-primary:hover,
   &.is-primary:focus {
-    background: var(--clr-primary-700);
+    --bg-color: var(--clr-primary-700);
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 2rem 4rem var(--clr-primary-400);
+    box-shadow: 0 0 8rem 2rem var(--bg-color);
+    transform: scale(1.02);
   }
 
   &:not(:disabled):active {
@@ -46,7 +49,7 @@
   &:disabled,
   &.is-disabled {
     color: var(--clr-white);
-    background: var(--clr-gray-500);
+    --bg-color: var(--clr-gray-500);
     opacity: 0.75;
   }
 
