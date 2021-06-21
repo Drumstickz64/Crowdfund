@@ -1,30 +1,38 @@
 .radio {
-	--color: var(--clr-gray-500);
-	
-	appearance: none;
+  --color: var(--clr-gray-500);
+
+  appearance: none;
   display: inline-block;
   position: relative;
   line-height: 1.25;
-	padding: 0.8em;
+  padding: 0.8em;
   border: 2px solid var(--clr-gray-200);
-	border-radius: 9999px;
-	color: var(--color);
+  border-radius: 9999px;
+  color: var(--color);
   cursor: pointer;
-  
+
   &:checked {
-  	background: radial-gradient(currentColor 40%, rgba(255, 255, 255, 0) 41%);
+    background: radial-gradient(currentColor 40%, rgba(255, 255, 255, 0) 41%);
   }
-  
+
   & + .label {
-  	margin-left: 12rem;
+    margin-left: 12rem;
   }
-  
+
+  & + .label:hover {
+    color: var(--clr-primary-400);
+  }
+
+  & + .label:hover span:nth-child(2) {
+    font-weight: var(--fw-bold);
+  }
+
   &-control {
-  	display: flex;
-  	align-items: center;
+    display: flex;
+    align-items: center;
   }
-  
+
   &.is-primary {
-  	--color: var(--clr-primary-400);
+    --color: var(--clr-primary-400);
   }
 }
