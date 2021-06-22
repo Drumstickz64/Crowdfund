@@ -2,48 +2,48 @@ $base-spacer: 2rem;
 $number-of-spacer-classes: 40;
 
 $directions: (
-	"top": "t",
-	"right": "r",
-	"bottom": "b",
-	"left": "l",
+  "top": "t",
+  "right": "r",
+  "bottom": "b",
+  "left": "l",
 );
 
 .m-0 {
-	margin: 0;
+  margin: 0;
 }
 
 .p-0 {
-	padding: 0;
+  padding: 0;
 }
 
 @each $direction-name, $direction-abbreviation in $directions {
-	.m#{$direction-abbreviation}-0 {
-		margin-#{$direction-name}: 0;
-	}
-	
-	.p#{$direction-abbreviation}-0 {
-		padding-#{$direction-name}: 0;
-	}
+  .m#{$direction-abbreviation}-0 {
+    margin-#{$direction-name}: 0;
+  }
+
+  .p#{$direction-abbreviation}-0 {
+    padding-#{$direction-name}: 0;
+  }
 }
 
 @for $i from 1 through $number-of-spacer-classes {
-	.m-#{$i} {
-		margin: $base-spacer * $i;
-	}
-	
-	@each $direction-name, $direction-abbreviation in $directions {
-		.m#{$direction-abbreviation}-#{$i} {
-			margin-#{$direction-name}: $base-spacer * $i;
-		}
-	}
-	
-	.p-#{$i} {
-		padding: $base-spacer * $i;
-	}
-	
-	@each $direction-name, $direction-abbreviation in $directions {
-		.p#{$direction-abbreviation}-#{$i} {
-			padding-#{$direction-name}: $base-spacer * $i;
-		}
-	}
+  .m-#{$i} {
+    margin: $base-spacer * $i;
+  }
+
+  @each $direction-name, $direction-abbreviation in $directions {
+    .m#{$direction-abbreviation}-#{$i} {
+      margin-#{$direction-name}: $base-spacer * $i;
+    }
+  }
+
+  .p-#{$i} {
+    padding: $base-spacer * $i;
+  }
+
+  @each $direction-name, $direction-abbreviation in $directions {
+    .p#{$direction-abbreviation}-#{$i} {
+      padding-#{$direction-name}: $base-spacer * $i;
+    }
+  }
 }

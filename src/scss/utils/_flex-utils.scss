@@ -1,22 +1,28 @@
-$placements: ("flex-start", "flex-end", "center", "space-between", "space-around");
+$placements: (
+  "flex-start",
+  "flex-end",
+  "center",
+  "space-between",
+  "space-around"
+);
 $flex-directions: ("column", "row");
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 @each $direction in $flex-directions {
-	.flex-dir-#{$direction} {
-		flex-direction: #{$direction};
-	}
+  .flex-dir-#{$direction} {
+    flex-direction: #{$direction};
+  }
 }
 
 @each $placement in $placements {
-	.justify-#{$placement} {
-		justify-content: #{$placement};
-	}
-	
-	.items-#{$placement} {
-		align-items: #{$placement};
-	}
+  .justify-#{$placement} {
+    justify-content: #{$placement};
+  }
+
+  .items-#{$placement} {
+    align-items: #{$placement};
+  }
 }

@@ -2,35 +2,35 @@ $base-sizer: 10rem;
 $number-of-sizing-classes: 20;
 
 .w-0 {
-	width: 0;
+  width: 0;
 }
 
 .h-0 {
-	height: 0;
+  height: 0;
 }
 
 @for $i from 1 through $number-of-sizing-classes {
-	.w-#{$i} {
-		width: $base-sizer * $i;
-	}
-	
-	.h-#{$i} {
-		height: $base-sizer * $i;
-	}
+  .w-#{$i} {
+    width: $base-sizer * $i;
+  }
+
+  .h-#{$i} {
+    height: $base-sizer * $i;
+  }
 }
 
 .w-full {
-	width: 100%;
+  width: 100%;
 }
 
 .w-auto {
-	width: auto;
+  width: auto;
 }
 
 .h-full {
-	height: 100%;
+  height: 100%;
 }
 
 .h-auto {
-	height: auto;
+  height: auto;
 }

@@ -4,9 +4,9 @@
 
 .pledge-card {
   --flow-spacer: 30rem;
+  --padding-x: 26rem;
 
   @extend .flow;
-  --padding-x: 26rem;
 
   padding: 32rem var(--padding-x);
   border: 2px solid var(--clr-gray-200);
@@ -39,10 +39,6 @@
     font-weight: var(--fw-regular);
     transform: translateY(-10rem);
   }
-
-  /* .btn {
-    margin-top: var(--flow-spacer);
-  } */
 
   &-footer,
   .line {

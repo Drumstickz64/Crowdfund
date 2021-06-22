@@ -1,36 +1,39 @@
 /* 1rem === 1px */
 html {
-	font-size: 6.25%;
+  font-size: 6.25%;
 }
 
 body {
-	--flow-spacer: 1.2em;
-	font-size: var(--fs-md);
-	font-family: var(--font-family);
+  --flow-spacer: 1.2em;
+  font-size: var(--fs-md);
+  font-family: var(--font-family);
 }
 
-h1, h2, h3, h4 {
-	line-height: 1.1;
-	font-weight: var(--fw-bold);
-	color: var(--clr-black);
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+  font-weight: var(--fw-bold);
+  color: var(--clr-black);
 }
 
 h1 {
-	font-size: var(--fs-xl);
+  font-size: var(--fs-xl);
 }
 
 h2 {
-	font-size: var(--fs-lg);
+  font-size: var(--fs-lg);
 }
 
 h3 {
-	font-size: var(--fs-md);
+  font-size: var(--fs-md);
 }
 
 h4 {
-	font-size: var(--fs-sm);
+  font-size: var(--fs-sm);
 }
 
 p {
-	font-size: var(--fs-md);
+  font-size: var(--fs-md);
 }
