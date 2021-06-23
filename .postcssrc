@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "autoprefixer": { "preset": "default" },
+    "@fullhuman/postcss-purgecss": {
+      "content": ["./src/**/*.html", "./src/js/**/*.js"]
+    },
+    "postcss-sort-media-queries": {}
+  }
+}

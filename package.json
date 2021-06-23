@@ -2,7 +2,6 @@
   "name": "crowdfund",
   "version": "1.0.0",
   "description": "a crowdfunding product page",
-  "main": "dist/index.html",
   "repository": "https://github.com/Drumstickz64/Crowdfund.git",
   "author": "Drumstickz64 <gearman533@gmail.com>",
   "license": "MIT",
@@ -11,6 +10,12 @@
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-beta.2"
+    "@babel/core": "^7.14.6",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "autoprefixer": "^10.2.6",
+    "parcel": "^2.0.0-beta.2",
+    "postcss": "^8.3.5",
+    "postcss-sort-media-queries": "^3.11.12"
   }
 }
