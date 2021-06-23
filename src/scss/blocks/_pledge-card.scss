@@ -40,6 +40,15 @@
     transform: translateY(-10rem);
   }
 
+  &:not(.is-selection) &-deal-area .btn {
+    margin-top: var(--flow-spacer);
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+  }
+
+  /* styles for selectable pledge cards (that contain radios) */
   &-footer,
   .line {
     display: none;
@@ -78,11 +87,6 @@
     color: var(--clr-black);
   }
 
-  &.is-disabled {
-    opacity: 0.5;
-  }
-
-  /* styles for selectable pledge cards (that contain radios) */
   &.is-selection &-stock span:first-child {
     font-size: var(--fs-lg);
   }
